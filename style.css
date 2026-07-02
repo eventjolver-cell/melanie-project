@@ -4,85 +4,238 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mis XV Años - Melanie</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css?v=1.2">
+  <!-- ESTILOS INTERNOS -->
+  <style>
+    /* ==========================================
+       ESTILOS GENERALES Y FONDO CLARO
+       ========================================== */
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fcf8f2; /* Tono crema claro */
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* Textura de papel */
+      color: #4a3b4e;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    /* ==========================================
+       ENCABEZADO (HERO)
+       ========================================== */
+    .hero {
+      padding: 50px 20px;
+      background: linear-gradient(to bottom, rgba(243, 230, 245, 0.8), rgba(252, 248, 242, 1));
+      border-bottom: 1px solid rgba(218, 192, 224, 0.4);
+    }
+    .hero-content__title {
+      font-size: 3rem;
+      color: #8e6f96; /* Púrpura elegante */
+      margin: 10px 0;
+      animation: sparkle 4s ease-in-out infinite;
+    }
+    .hero-content__subtitle {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #9a8c9e;
+    }
+    .hero-content__phrase {
+      font-style: italic;
+      color: #6c5b7b;
+      max-width: 80%;
+      margin: 15px auto;
+    }
+
+    /* ==========================================
+       CONTADOR (COUNTDOWN) - ALINEADO Y CENTRADO
+       ========================================== */
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px auto;
+      max-width: 90%;
+    }
+    .time-box {
+      background: linear-gradient(to bottom, #ffffff, #fdf6ff);
+      border: 1px solid #e1cee6;
+      border-radius: 10px;
+      padding: 15px;
+      width: 80px;
+      box-shadow: 0 4px 10px rgba(142, 111, 150, 0.05);
+    }
+    .time-box__span {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #8e6f96;
+      display: block;
+    }
+    .time-box__p {
+      font-size: 0.8rem;
+      margin: 5px 0 0 0;
+      text-transform: uppercase;
+      color: #9a8c9e;
+    }
+
+    /* ==========================================
+       BLOQUES DE CONTENIDO Y UBICACIONES
+       ========================================== */
+    .section-details-section, .section-photos-section {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 500px;
+      animation: waterRipple 3s infinite;
+      border-radius: 15px;
+    }
+    .detail-box {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(218, 192, 224, 0.4);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 450px;
+      box-shadow: 0 5px 15px rgba(142, 111, 150, 0.02);
+    }
+    .detail-box__note {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #7d6a80;
+    }
+    h2, h3 {
+      color: #7d5a87;
+    }
+
+    /* ==========================================
+       BOTONES ESTILO 3D SUAVE
+       ========================================== */
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background: linear-gradient(135deg, #b592be 0%, #8e6f96 100%);
+      color: #ffffff !important;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 25px;
+      box-shadow: 0 4px 10px rgba(142, 111, 150, 0.3);
+      transition: all 0.3s ease;
+      border: none;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(142, 111, 150, 0.4);
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(218, 192, 224, 0.6), transparent);
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    /* ==========================================
+       ANIMACIONES MÁGICAS (LIRIOS Y AGUA)
+       ========================================== */
+    @keyframes floatLily {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .lily-animation {
+      display: inline-block;
+      animation: floatLily 4s ease-in-out infinite;
+    }
+
+    @keyframes waterRipple {
+      0% { box-shadow: 0 0 0 0 rgba(218, 192, 224, 0.3); }
+      70% { box-shadow: 0 0 0 10px rgba(218, 192, 224, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(218, 192, 224, 0); }
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; text-shadow: 0 0 8px rgba(218, 192, 224, 0.5); }
+    }
+
+    footer {
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      color: #9a8c9e;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container">
-    
-    <header>
-      <p class="subtitle">MIS XV AÑOS</p>
-      <h1>Melanie</h1>
-      <p class="quote">"Si te esfuerzas con el corazón, tus sueños se harán realidad."</p>
-      <div class="flower-icon">✨ 👑 🔮</div>
-    </header>
-
-    <section class="card">
-      <h2>Faltan muy pocos días...</h2>
-      <div class="countdown-container">
-        <div class="countdown-box">
-          <span class="countdown-number" id="days">00</span>
-          <span class="countdown-label">Días</span>
-        </div>
-        <div class="countdown-box">
-          <span class="countdown-number" id="hours">00</span>
-          <span class="countdown-label">Horas</span>
-        </div>
-        <div class="countdown-box">
-          <span class="countdown-number" id="minutes">00</span>
-          <span class="countdown-label">Minutos</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-details-section">
-      <h2>¿Cuándo y Dónde?</h2>
-      <div class="flower-icon">🌸</div>
-      
-      <div class="detail-box">
-        <h3>⛪ Ceremonia Religiosa</h3>
-        <p><strong>Hora:</strong> 16:00 PM</p>
-        <p>Parroquia de San Antonio de PADUA<br>Insurgentes y Guanajuato 423, Centro</p>
-        <a href="https://maps.google.com" target="_blank" class="btn">Ver en Mapa</a>
-      </div>
-
-      <div class="detail-box">
-        <h3>👑 Recepción</h3>
-        <p><strong>Hora:</strong> 18:00 PM</p>
-        <p>Salón Quinta Alejandra<br>Calle Durango s/n Colonia el Becerro</p>
-        <a href="https://maps.google.com" target="_blank" class="btn">Ver en Mapa</a>
-      </div>
-    </section>
-
-    <section class="card">
-      <h3>👗 Código de Vestimenta</h3>
-      <p><strong>Formal / Elegante</strong></p>
-      <p style="font-size: 0.9rem; font-style: italic;">(Se agradece evitar el color verde esmeralda, reservado para la quinceañera)</p>
-    </section>
-
-    <section class="card">
-      <h3>🎁 Lluvia de Sobres</h3>
-      <p>Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con Melanie, contaremos con una urna para lluvia de sobres en la entrada del salón.</p>
-    </section>
-
-    <section class="section-photos-section">
-      <h2>📸 Compartir Recuerdos</h2>
-      <p>¡Ayúdanos a conservar cada momento! Sube aquí tus fotos y videos del evento.</p>
-      <a href="https://photos.app.goo.gl/p7jCCDCu9UbxQBCd8" class="btn" target="_blank">Subir fotos y videos</a>
-    </section>
-
-    <footer>
-      <p>¡Te esperamos para compartir este día tan mágico!</p>
-    </footer>
-
+  <!-- ENCABEZADO MÁGICO -->
+  <div class="hero">
+    <div class="hero-content">
+      <p class="hero-content__subtitle">Mis XV Años</p>
+      <h1 class="hero-content__title">Melanie</h1>
+      <p class="hero-content__phrase">"Si te esfuerzas con el corazón, tus sueños se harán realidad."</p>
+      <div class="lily-animation">✨ 👑 🔮</div>
+    </div>
   </div>
 
-  <script>
-    // Aquí puedes colocar el script del contador si tenías uno activo
-  </script>
+  <div class="divider"></div>
+
+  <!-- CONTADOR REVERSIVO -->
+  <h2>Faltan muy pocos días...</h2>
+  <div class="countdown-container">
+    <div class="time-box">
+      <span class="time-box__span" id="days">09</span>
+      <p class="time-box__p">Días</p>
+    </div>
+    <div class="time-box">
+      <span class="time-box__span" id="hours">03</span>
+      <p class="time-box__p">Horas</p>
+    </div>
+    <div class="time-box">
+      <span class="time-box__span" id="minutes">28</span>
+      <p class="time-box__p">Minutos</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECCIÓN DETALLES (¿CUÁNDO Y DÓNDE?) -->
+  <div class="section-details-section">
+    <h2>¿Cuándo y Dónde?</h2>
+    <div class="lily-animation">🌸</div>
+    
+    <div class="detail-box">
+      <h3>⛪ Ceremonia Religiosa</h3>
+      <p><strong>Hora:</strong> 16:00 PM</p>
+      <p>Parroquia de San Antonio de PADUA<br>Insurgentes y Guanajuato 423, Centro</p>
+      <a href="https://maps.google.com" target="_blank" class="btn">Ver en Mapa</a>
+    </div>
+
+    <div class="detail-box">
+      <h3>👑 Recepción</h3>
+      <p><strong>Hora:</strong> 18:00 PM</p>
+      <p>Salón Quinta Alejandra<br>Calle Durango s/n Colonia el Becerro</p>
+      <a href="https://maps.google.com" target="_blank" class="btn">Ver en Mapa</a>
+    </div>
+  </div>
+
+  <!-- CÓDIGO DE VESTIMENTA -->
+  <div class="detail-box">
+    <h3>👗 Código de Vestimenta</h3>
+    <p><strong>Formal / Elegante</strong></p>
+    <p class="detail-box__note">(Se agradece evitar el color verde esmeralda, reservado para la quinceañera)</p>
+  </div>
+
+  <!-- COMPARTIR RECUERDOS -->
+  <div class="section-photos-section">
+    <h2>📸 Compartir Recuerdos</h2>
+    <p>¡Ayúdanos a conservar cada momento! Sube aquí tus fotos y videos del evento.</p>
+    <a href="https://photos.app.goo.gl/p7jCCDCu9UbxQBCd8" class="btn" target="_blank">Subir fotos y videos</a>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>© 2026 - Mis XV Años Melanie | Hecho con amor 👑</p>
+  </footer>
+
 </body>
 </html>
