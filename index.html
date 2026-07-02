@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Proyecto Melanie</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #c8f7c5, #d8b4f8);
-      color: #333;
-      text-align: center;
-    }
-    header {
-      padding: 60px 20px;
-    }
-    h1 {
-      font-size: 40px;
-    }
-    p {
-      font-size: 18px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyecto Luciérnaga</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1>🌿 Melanie 🌿</h1>
-    <p>Un proyecto hecho con cariño</p>
-  </header>
+
+  <div class="background-glow"></div>
+  <canvas id="fireflies"></canvas>
+
+  <main class="container">
+
+    <h1 class="title fade-in">Los recuerdos de una noche mágica</h1>
+
+    <h2 class="name fade-in delay-1">Melanie</h2>
+
+    <p class="date fade-in delay-2">11 de julio de 2026</p>
+
+    <button class="btn fade-in delay-3">
+      📸 Compartir mis recuerdos
+    </button>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
