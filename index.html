@@ -31,3 +31,58 @@
   <script src="script.js"></script>
 </body>
 </html>
+const canvas = document.getElementById("fireflies");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let fireflies = [];
+
+for (let i = 0; i < 60; i++) {
+  fireflies.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 2 + 1,
+    vx: (Math.random() - 0.5) * 0.6,
+    vy: (Math.random() - 0.5) * 0.6,
+    alpha: Math.random()
+  });
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  fireflies.forEach(f => {
+    f.x += f.vx;
+    f.y += f.vy;
+
+    if (f.x < 0 || f.x > canvas.width) f.vx *= -1;
+    if (f.y < 0 || f.y > canvas.height) f.vy *= -1;
+
+    f.alpha += (Math.random() - 0.5) * 0.05;
+    if (f.alpha < 0.2) f.alpha = 0.2;
+    if (f.alpha > 1) f.alpha = 1;
+
+    ctx.beginPath();
+    ctx.arc(f.x, f.y, f.radius, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(200, 255, 200, ${f.alpha})`;
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = "#a5d6a7";
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+/* Botón (lo dejamos listo para fase 3) */
+document.querySelector(".btn").addEventListener("click", () => {
+  alert("Próximamente: carga de recuerdos ✨");
+});
