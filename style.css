@@ -1,174 +1,88 @@
-/* ==========================================================================
-   ESTILOS GENERALES Y FONDO DE LA INVITACIÓN
-   ========================================================================== */
-body {
-  font-family: 'Playfair Display', 'Georgia', serif;
-  background-color: #fcf8f2; /* Tono beige/crema muy claro como el de tu imagen */
-  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* Textura de papel elegante */
-  color: #4a3b4e; /* Texto en un tono púrpura oscuro muy suave */
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis XV Años - Melanie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+<body>
 
-/* Contenedor principal con bordes florales sugeridos en las esquinas */
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  box-sizing: border-box;
-}
+  <div class="container">
+    
+    <header>
+      <p class="subtitle">MIS XV AÑOS</p>
+      <h1>Melanie</h1>
+      <p class="quote">"Si te esfuerzas con el corazón, tus sueños se harán realidad."</p>
+      <div class="flower-icon">✨ 👑 🔮</div>
+    </header>
 
-/* ==========================================================================
-   SECCIÓN DE ENCABEZADO (HEADER)
-   ========================================================================== */
-header {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to bottom, rgba(243, 230, 245, 0.8), rgba(252, 248, 242, 1));
-  border-bottom: 1px solid rgba(218, 192, 224, 0.4);
-  position: relative;
-}
+    <section class="card">
+      <h2>Faltan muy pocos días...</h2>
+      <div class="countdown-container">
+        <div class="countdown-box">
+          <span class="countdown-number" id="days">00</span>
+          <span class="countdown-label">Días</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="hours">00</span>
+          <span class="countdown-label">Horas</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="minutes">00</span>
+          <span class="countdown-label">Minutos</span>
+        </div>
+      </div>
+    </section>
 
-header h1 {
-  font-size: 3.5rem;
-  font-family: 'Great Vibes', 'Parisienne', cursive, serif;
-  color: #8e6f96; /* Púrpura pastel elegante */
-  margin: 10px 0;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-}
+    <section class="section-details-section">
+      <h2>¿Cuándo y Dónde?</h2>
+      <div class="flower-icon">🌸</div>
+      
+      <div class="detail-box">
+        <h3>⛪ Ceremonia Religiosa</h3>
+        <p><strong>Hora:</strong> 16:00 PM</p>
+        <p>Parroquia de San Antonio de PADUA<br>Insurgentes y Guanajuato 423, Centro</p>
+        <a href="https://maps.google.com" target="_blank" class="btn">Ver en Mapa</a>
+      </div>
 
-header p {
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #6c5b7b;
-}
+      <div class="detail-box">
+        <h3>👑 Recepción</h3>
+        <p><strong>Hora:</strong> 18:00 PM</p>
+        <p>Salón Quinta Alejandra<br>Calle Durango s/n Colonia el Becerro</p>
+        <a href="https://maps.google.com" target="_blank" class="btn">Ver en Mapa</a>
+      </div>
+    </section>
 
-/* ==========================================================================
-   TARJETAS Y BLOQUES DE INFORMACIÓN
-   ========================================================================== */
-.card, .detail-box, .section-details-section, .section-photos-section {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(218, 192, 224, 0.5);
-  border-radius: 15px;
-  padding: 25px;
-  margin-bottom: 25px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(142, 111, 150, 0.05);
-  backdrop-filter: blur(5px);
-  transition: transform 0.3s ease;
-}
+    <section class="card">
+      <h3>👗 Código de Vestimenta</h3>
+      <p><strong>Formal / Elegante</strong></p>
+      <p style="font-size: 0.9rem; font-style: italic;">(Se agradece evitar el color verde esmeralda, reservado para la quinceañera)</p>
+    </section>
 
-.card:hover, .detail-box:hover {
-  transform: translateY(-5px);
-}
+    <section class="card">
+      <h3>🎁 Lluvia de Sobres</h3>
+      <p>Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con Melanie, contaremos con una urna para lluvia de sobres en la entrada del salón.</p>
+    </section>
 
-h2, h3 {
-  color: #7d5a87;
-  font-family: 'Playfair Display', serif;
-}
+    <section class="section-photos-section">
+      <h2>📸 Compartir Recuerdos</h2>
+      <p>¡Ayúdanos a conservar cada momento! Sube aquí tus fotos y videos del evento.</p>
+      <a href="https://photos.app.goo.gl/p7jCCDCu9UbxQBCd8" class="btn" target="_blank">Subir fotos y videos</a>
+    </section>
 
-/* ==========================================================================
-   BOTONES INTERACTIVOS (ESTILO 3D SUAVE)
-   ========================================================================== */
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background: linear-gradient(135deg, #b592be 0%, #8e6f96 100%);
-  color: #ffffff !important;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 25px;
-  box-shadow: 0 5px 15px rgba(142, 111, 150, 0.3);
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
+    <footer>
+      <p>¡Te esperamos para compartir este día tan mágico!</p>
+    </footer>
 
-.btn:hover {
-  background: linear-gradient(135deg, #a37fa9 0%, #7d5a87 100%);
-  box-shadow: 0 8px 20px rgba(142, 111, 150, 0.5);
-  transform: scale(1.05);
-}
+  </div>
 
-/* ==========================================================================
-   CONTADOR REVERSIVO (COUNTDOWN)
-   ========================================================================== */
-.countdown-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.countdown-box {
-  background: linear-gradient(to bottom, #ffffff, #fdf6ff);
-  border: 1px solid #e1cee6;
-  border-radius: 10px;
-  padding: 15px;
-  width: 25%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-}
-
-.countdown-number {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #8e6f96;
-  display: block;
-}
-
-.countdown-label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: #9a8c9e;
-  letter-spacing: 1px;
-}
-
-/* ==========================================================================
-   ANIMACIONES MÁGICAS, LIRIOS Y EFECTO AGUA (3D)
-   ========================================================================== */
-
-/* 1. Animación de flotación suave para los elementos de Lirios */
-@keyframes floatLily {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(2deg); }
-  100% { transform: translateY(0) rotate(0deg); }
-}
-
-/* Aplica esta clase en HTML a los emojis o imágenes de lirios/flores */
-.lily-animation, .flower-icon {
-  display: inline-block;
-  animation: floatLily 5s ease-in-out infinite;
-}
-
-/* 2. Efecto de ondas de agua en el fondo de las secciones */
-@keyframes waterRipple {
-  0% { box-shadow: 0 0 0 0 rgba(218, 192, 224, 0.4), 0 10px 30px rgba(142, 111, 150, 0.05); }
-  70% { box-shadow: 0 0 0 15px rgba(218, 192, 224, 0), 0 10px 30px rgba(142, 111, 150, 0.05); }
-  100% { box-shadow: 0 0 0 0 rgba(218, 192, 224, 0), 0 10px 30px rgba(142, 111, 150, 0.05); }
-}
-
-.section-photos-section, .section-details-section {
-  animation: waterRipple 3s infinite;
-}
-
-/* 3. Destellos mágicos sutiles en los títulos */
-@keyframes sparkle {
-  0%, 100% { opacity: 0.6; text-shadow: 0 0 2px rgba(255,255,255,0.5); }
-  50% { opacity: 1; text-shadow: 0 0 8px rgba(218, 192, 224, 0.8), 0 0 12px rgba(255,255,255,0.9); }
-}
-
-header h1, h2 {
-  animation: sparkle 4s ease-in-out infinite;
-}
-
-/* ==========================================================================
-   PIE DE PÁGINA (FOOTER)
-   ========================================================================== */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 0.9rem;
-  color: #9a8c9e;
-  background: linear-gradient(to bottom, rgba(252, 248, 242, 0), rgba(243, 230, 245, 0.4));
-}
+  <script>
+    // Aquí puedes colocar el script del contador si tenías uno activo
+  </script>
+</body>
+</html>
